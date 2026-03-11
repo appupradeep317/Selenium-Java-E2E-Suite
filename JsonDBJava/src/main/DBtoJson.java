@@ -30,7 +30,8 @@ public class DBtoJson {
 		//object of statement class will help to execute queries
 		Statement st= conn.createStatement();
 		ArrayList<CustomerDetails> a = new ArrayList<CustomerDetails>();
-		ResultSet rs = st.executeQuery("select * from CustomerInfo where purchasedDate=CURDATE() and Location ='Asia'");
+		//ResultSet rs = st.executeQuery("select * from CustomerInfo where purchasedDate=CURDATE() and Location ='Asia'");
+		ResultSet rs = st.executeQuery("select * from CustomerInfo where Location ='Asia'");
 		while(rs.next()) //pointer reaches 1st row and returns false when there is no row
 		{
 			/*
